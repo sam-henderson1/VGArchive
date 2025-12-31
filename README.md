@@ -1,7 +1,7 @@
 # VGArchive
-##An archive of videogames
+## An archive of videogames
 
-###How to run
+### How to run
 
 open terminals for backend and frontend
 
@@ -11,7 +11,7 @@ open terminals for backend and frontend
 
 open link provided by the frontend terminal
 
-###How to run in docker
+### How to run in docker
 
 run docker
 
