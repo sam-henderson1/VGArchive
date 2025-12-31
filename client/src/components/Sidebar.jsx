@@ -2,8 +2,9 @@
 export default function Sidebar({ category, setCategory, setPage, setSearch }) {
   const categories = [
     { label: 'All Games', value: '' },
-    { label: 'Highly Rated', value: 'HRated' },
-    { label: 'Recent Releases', value: 'recent' },
+    { label: 'Greatest of All Time', value: 'HRated' },
+    { label: 'Released Last Month', value: 'recent' },
+    { label: 'Releasing Next Month', value: 'upcoming'}
   ];
 
   const handleCategoryClick = (value) => {

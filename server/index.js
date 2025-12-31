@@ -18,6 +18,14 @@ app.get("/api/games", async (req, res) => {
   let ordering;
   let dates;
   const today = new Date().toISOString().split('T')[0];
+
+  const pastDate = new Date();
+  pastDate.setMonth(pastDate.getMonth() - 1);
+  const past = pastDate.toISOString().split('T')[0];
+
+  const futureDate = new Date();
+  futureDate.setMonth(futureDate.getMonth() + 1);
+  const future = futureDate.toISOString().split('T')[0];
   
   switch (category) {
     case "HRated":
@@ -25,7 +33,11 @@ app.get("/api/games", async (req, res) => {
       break;
     case "recent":
       ordering = "-released";
-      dates = `1900-01-01,${today}`
+      dates = `${past},${today}`;
+      break;
+    case "upcoming":
+      ordering = "-added";
+      dates = `${today},${future}`;
       break;
     default:
       ordering = "";

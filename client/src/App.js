@@ -86,7 +86,8 @@ function App() {
               <span className="text-white">Page {page}</span>
               <button 
                 onClick={() => setPage(page + 1)}
-                className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                disabled={games.length < 21}
+                className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition-colors"
               >
                 Next
               </button>
