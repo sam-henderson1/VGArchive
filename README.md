@@ -19,8 +19,10 @@ open terminals for backend and frontend
 
 run in frontend terminal:
 docker build -t vgarchive-frontend .
+
 docker run -p 3000:3000 vgarchive-frontend
 
 run in backend terminal:
 docker build -t vgarchive-backend .
+
 docker run -p 5000:5000 vgarchive-backend
