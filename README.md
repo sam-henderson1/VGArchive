@@ -7,9 +7,9 @@
 
 open terminals for server and client
 
-"npm run dev" in backend terminal
+"npm run dev" in server terminal
 
-"npm start" in frontend terminal
+"npm start" in client terminal
 
 open link provided by the frontend terminal
 
@@ -19,13 +19,13 @@ run docker
 
 open terminals for server and client
 
-run in frontend terminal:
+run in client terminal:
 
 docker build -t vgarchive-frontend .
 
 docker run -p 3000:3000 vgarchive-frontend
 
-run in backend terminal:
+run in server terminal:
 
 docker build -t vgarchive-backend .
 
