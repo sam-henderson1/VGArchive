@@ -16,26 +16,35 @@ app.get("/api/games", async (req, res) => {
 
   //switch case for ordering based on category
   let ordering;
+  let dates;
+  const today = new Date().toISOString().split('T')[0];
+  
   switch (category) {
-    case "popular":
+    case "HRated":
       ordering = "-metacritic";
       break;
     case "recent":
       ordering = "-released";
+      dates = `1900-01-01,${today}`
+      break;
+    default:
+      ordering = "";
       break;
   }
 
   try {
+    // Fetch games from RAWG API
     const response = await axios.get(baseURL, {
       params: {
         key: process.env.API_KEY,
         ordering,
         page,
-        page_size: 20,
+        page_size: 21,
         search,
+        dates,
       },
     });
-
+    // Return the results to the client
     res.json(response.data.results);
   } catch (err) {
     console.error(err);
@@ -44,6 +53,5 @@ app.get("/api/games", async (req, res) => {
 });
 
 
-//npm run dev
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

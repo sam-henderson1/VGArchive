@@ -7,18 +7,17 @@ import { useState, useEffect } from 'react';
 function App() {
   // State management
   const [category, setCategory] = useState('');
-  const [sort, setSort] = useState('-metacritic');
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [games, setGames] = useState([]);
 
-  // Fetch games from your backend
+  // Fetch games from backend
   useEffect(() => {
     const fetchGames = async () => {
       setLoading(true);
       try {
-        // Build query params
+        // query params
         const params = new URLSearchParams({
           page: page,
           category: category,
@@ -26,6 +25,7 @@ function App() {
         
         if (search) {
           params.append('search', search);
+          setCategory('');
         }
 
         const response = await fetch(`http://localhost:5000/api/games?${params}`);
@@ -49,31 +49,31 @@ function App() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-900 text-white">
-      {/* Header */}
+      {/*Header*/}
       <Header 
         search={search} 
         setSearch={setSearch}
-        sort={sort}
-        setSort={setSort}
         setPage={setPage}
+        setCategory={setCategory}
       />
 
-      {/* Body */}
+      {/*Body*/}
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
+        {/*Sidebar*/}
         <div className="w-64 border-r border-gray-700 overflow-y-auto bg-gray-900">
           <Sidebar 
             category={category} 
             setCategory={setCategory}
+            setSearch={setSearch}
             setPage={setPage}
           />
         </div>
 
-        {/* Main Content */}
+        {/*Games*/}
         <div className="flex-1 p-6 overflow-y-auto">
           <GameGrid games={games} loading={loading} />
           
-          {/* Pagination */}
+          {/*Pagination*/}
           {games.length > 0 && (
             <div className="flex justify-center mt-8 gap-4 items-center">
               <button 

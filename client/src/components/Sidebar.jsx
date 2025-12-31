@@ -1,13 +1,14 @@
 
-export default function Sidebar({ category, setCategory, setPage }) {
+export default function Sidebar({ category, setCategory, setPage, setSearch }) {
   const categories = [
     { label: 'All Games', value: '' },
-    { label: 'Popular', value: 'popular' },
-    { label: 'Recent', value: 'recent' },
+    { label: 'Highly Rated', value: 'HRated' },
+    { label: 'Recent Releases', value: 'recent' },
   ];
 
   const handleCategoryClick = (value) => {
     setCategory(value);
+    setSearch('')
     setPage(1);
   };
 

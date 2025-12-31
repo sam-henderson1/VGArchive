@@ -3,7 +3,7 @@ export default function GameCard({game}) {
   return (
     <div className="border border-gray-700 rounded-lg overflow-hidden bg-gray-800 hover:scale-105 transition-transform cursor-pointer">
       <img 
-        src={game.background_image || 'https://via.placeholder.com/400x225'} 
+        src={game.background_image || '/imgNotFound.png'} 
         alt={game.name}
         className="h-48 w-full object-cover"
       />
@@ -12,7 +12,7 @@ export default function GameCard({game}) {
           {game.name}
         </h3>
         <p className="text-sm text-gray-400 mt-1">
-          Metacritic: {game.metacritic || 'N/A'}
+          Metacritic: {game.metacritic || 'TBD'}
         </p>
         <p className="text-xs text-gray-500 mt-1">
           Released: {game.released || 'TBA'}
