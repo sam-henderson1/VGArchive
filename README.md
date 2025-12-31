@@ -1,5 +1,7 @@
 # VGArchive
 ## An archive of videogames
+<img width="1906" height="992" alt="image" src="https://github.com/user-attachments/assets/dad830eb-9149-48bc-8702-8d72fe6db721" />
+
 
 ### How to run
 
