@@ -17,7 +17,7 @@ open link provided by the client terminal
 
 ### How to run in docker
 
-run docker
+open docker desktop app
 
 open terminals for server and client
 
