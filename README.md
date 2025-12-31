@@ -13,7 +13,7 @@ run "npm i" in both terminals
 
 "npm start" in client terminal
 
-open link provided by the frontend terminal
+open link provided by the client terminal
 
 ### How to run in docker
 
