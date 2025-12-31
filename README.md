@@ -7,6 +7,8 @@
 
 open terminals for server and client
 
+run npm i in both terminals
+
 "npm run dev" in server terminal
 
 "npm start" in client terminal
