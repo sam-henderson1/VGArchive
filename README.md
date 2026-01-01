@@ -9,7 +9,7 @@ Create .env in server folder
 
 get API key from rawg.io/apidocs
 
-add API_KEY=<Your key> to .env
+add API_KEY=`<your key here>` to .env
 
 open terminals for server and client
 
