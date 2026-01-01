@@ -49,7 +49,6 @@ function App() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-900 text-white">
-      {/*Header*/}
       <Header 
         search={search} 
         setSearch={setSearch}
@@ -59,7 +58,6 @@ function App() {
 
       {/*Body*/}
       <div className="flex flex-1 overflow-hidden">
-        {/*Sidebar*/}
         <div className="w-64 border-r border-gray-700 overflow-y-auto bg-gray-900">
           <Sidebar 
             category={category} 
@@ -69,10 +67,8 @@ function App() {
           />
         </div>
 
-        {/*Games*/}
         <div className="flex-1 p-6 overflow-y-auto">
           <GameGrid games={games} loading={loading} />
-          
           {/*Pagination*/}
           {games.length > 0 && (
             <div className="flex justify-center mt-8 gap-4 items-center">
