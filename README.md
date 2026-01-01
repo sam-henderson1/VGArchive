@@ -5,6 +5,10 @@
 
 ### How to run
 
+Create .env in server folder
+
+get API key from rawg.io/apidocs
+
 open terminals for server and client
 
 run "npm i" in both terminals
