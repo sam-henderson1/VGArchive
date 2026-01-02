@@ -53,7 +53,6 @@ function App() {
         search={search} 
         setSearch={setSearch}
         setPage={setPage}
-        setCategory={setCategory}
       />
 
       {/*Body*/}
