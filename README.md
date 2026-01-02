@@ -25,16 +25,8 @@ open link provided by the client terminal
 
 open docker desktop app
 
-open terminals for server and client
+open terminal for VGArchive root
 
-run in client terminal:
+run in terminal:
 
-docker build -t vgarchive-frontend .
-
-docker run -p 3000:3000 vgarchive-frontend
-
-run in server terminal:
-
-docker build -t vgarchive-backend .
-
-docker run -p 5000:5000 vgarchive-backend
+docker compose up --build
