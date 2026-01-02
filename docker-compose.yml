@@ -24,4 +24,4 @@ services:
       - server
 
 ## To run the application, use the command:
-## docker-compose up --build
+## docker compose up --build
